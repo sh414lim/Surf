@@ -1,0 +1,8 @@
+{
+  "name": "Surf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sh414lim/Surf.git",
+  "author": "sh414lim <77113306+sh414lim@users.noreply.github.com>",
+  "license": "MIT"
+}
