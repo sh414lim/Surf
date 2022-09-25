@@ -4,5 +4,10 @@
   "main": "index.js",
   "repository": "https://github.com/sh414lim/Surf.git",
   "author": "sh414lim <77113306+sh414lim@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-react": "^7.18.6"
+  }
 }
