@@ -1,17 +1,24 @@
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const { webpack } = require("webpack");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
+const { createProxyMiddleware } = require('http-proxy-middleware');
+const webpack = require('webpack');
+const path = require('path');
+
+const MAX_CYCLES = 10;
+let numCyclesDetected = 0;
 
 module.exports = {
-    mode: 'development', // 1
-    entry: './src/index.js', // 2
-    output: { // 3
+  mode: 'development',
 
-      path: path.resolve(__dirname , 'dist'),
-      filename : 'bundle.js',
-      publicPath:'/dist/'
-      },
+  //진입전 스크립트 파일
+  entry: path.resolve(__dirname, 'src/index.js'),
 
-     
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/dist/',
+  },
+
   module: {
     rules: [
       {
@@ -38,8 +45,7 @@ module.exports = {
     ],
   },
 
-  plugins:[
-
+  plugins: [
     new CleanWebpackPlugin(),
 
     new webpack.DefinePlugin({
@@ -47,13 +53,13 @@ module.exports = {
     }),
   ],
 
-  resolve:{
-      //프로젝트의 루트 디렉로리 설정  상대경로 대신에 절대경로 가능하도록 @
-      extensions:['*','.js','.jsx'],
-      module : [path.resolve(__dirname, 'src'), 'node_modules'],
-      alias:{
-        '@':path.resolve(__dirname,'src'),
-      },
+  resolve: {
+    // 프로젝트의 루트디렉토리 설정, 상대경로 대신에 절대경로 가능하도록 함.(../components -> /components)
+    extensions: ['*', '.js', '.jsx'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
   },
 
   devServer: {
@@ -63,12 +69,5 @@ module.exports = {
     hot: true, // HRM(새로 고침 안해도 변경된 모듈 자동으로 적용)
     historyApiFallback: true,
     //   open: true,
-    proxy: {
-      '/api': 'http://localhost:8086',
-    },
   },
-
-
-
-
-  };
+};
