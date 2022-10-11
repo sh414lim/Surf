@@ -69,5 +69,8 @@ module.exports = {
     hot: true, // HRM(새로 고침 안해도 변경된 모듈 자동으로 적용)
     historyApiFallback: true,
     //   open: true,
+    proxy: {
+      '/api': 'http://localhost:8080',
+    },
   },
 };

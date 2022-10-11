@@ -1,9 +1,10 @@
 import React from "react";
+import Routers from "./Router/Router";
 
 const App = () =>{
     return(
-        <h1>hello world</h1>
+        <Routers/>
     )
 }
 
-export default App;
+export default App
