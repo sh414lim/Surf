@@ -1,66 +1,72 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import * as React from "react";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
-const Image = styled.img`
-height: 240%;
-width:633px;
-margin:0px 0px 0px 0px;
-padding: 0px;
-opacity: 0.9;
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
 
-/* position: absolute; */
-&:hover{
-  /* box-shadow: 10px 9px 10px 9px rgba(0,0,0,0.2); */
-  transform: scale(1.1);
-    /* margin-left:280px ; */
-    transition: 1.1s;
-    /* margin-top: 100px ; */
-    opacity: 1;
-}
-`
-const ImgBox = styled.div`
-position: relative;
-display: flex;
-
-`
-
-const Title = styled.p`
-font-size: 100px;
-display: flex;
-justify-content: start;
-width:80%;
-position:absolute;
-`
-
-const IntroPage = () =>{
-
-    return(
-        <ImgBox>
-
-             <ImgBox>
-               <Link Link to="/main">
-                <Image src={require(`../../../public/image/city4.png`).default}  />
-               </Link>
-             </ImgBox>
-
-
-             <ImgBox>
-               <Link Link to="/main">
-                <Image src={require(`../../../public/image/city.png`).default}  />
-               </Link>
-             </ImgBox>
-
-             <ImgBox>
-               <Link Link to="/main">
-                <Image src={require(`../../../public/image/city2.png`).default}  />
-               </Link>
-             </ImgBox>
-
-        
-        </ImgBox>
-
-      )
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
 }
 
-export default IntroPage
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
+
+export default function IntroPage() {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <Box sx={{ width: "100%" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+        >
+          <Tab label="Item One" {...a11yProps(0)} />
+          <Tab label="Item Two" {...a11yProps(1)} />
+          <Tab label="Item Three" {...a11yProps(2)} />
+        </Tabs>
+      </Box>
+      <TabPanel value={value} index={0}>
+        Item One
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        Item Two
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        Item Three
+      </TabPanel>
+    </Box>
+  );
+}

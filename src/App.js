@@ -7,10 +7,7 @@ const App = () => {
   return (
     <>
       <RecoilRoot>
-        <GlobalStyle />
         <Routers />
-        {/* <Profile /> */}
-        {/* <Morking /> */}
       </RecoilRoot>
     </>
   );
