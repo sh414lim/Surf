@@ -16,7 +16,7 @@ function IntroPage() {
 
   return (
     <>
-      <Grid container spaciong={3} sx={{ padding: '5px' }}>
+      <Grid container spaciong={3} sx={{ padding: '15px' }}>
         <Grid xs={4} sx={{ display: 'flex' }}>
           <Typography>S U R F</Typography>
         </Grid>
