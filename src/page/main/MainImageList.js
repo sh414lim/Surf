@@ -15,6 +15,7 @@ const MainImageList = () => {
               boxShadow: '5px 5px 15px 1px rgba(0, 0, 0, .3)',
               '&:hover': {
                 boxShadow: '10px 10px 20px 3px rgba(0, 0, 0, .9)',
+                transition: '0.5s',
               },
             }}
           >

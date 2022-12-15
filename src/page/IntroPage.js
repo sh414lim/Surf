@@ -20,13 +20,15 @@ function IntroPage() {
         <Grid xs={4} sx={{ display: 'flex' }}>
           <Typography>S U R F</Typography>
         </Grid>
-        <Grid xs={4}>
-          <Typography sx={{ display: 'flex' }}>
-            <FmdGoodIcon size="small" />
-            <Typography sx={{ fontSize: '15px', margin: '3px 0px 0px 0px', '&:hover': { color: 'blue' } }}>
-              Where is Best Place?
+        <Grid xs={4} sx={{ margin: '0px 0px 0px 0px' }}>
+          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Typography sx={{ display: 'flex' }}>
+              <FmdGoodIcon size="small" />
+              <Typography sx={{ fontSize: '15px', margin: '3px 0px 0px 0px', '&:hover': { color: 'blue' } }}>
+                Where is Best Place?
+              </Typography>
             </Typography>
-          </Typography>
+          </Box>
         </Grid>
 
         <Grid xs={4}>
