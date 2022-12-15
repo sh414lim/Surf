@@ -16,15 +16,15 @@ function IntroPage() {
 
   return (
     <>
-      <Grid container spaciong={3} sx={{ padding: '15px' }}>
+      <Grid container spaciong={3} sx={{ padding: '15px', width: '97%', margin: '0px 0px 0px 10px' }}>
         <Grid xs={4} sx={{ display: 'flex' }}>
-          <Typography>S U R F</Typography>
+          <Typography sx={{ fontSize: '20px' }}>S U R F</Typography>
         </Grid>
         <Grid xs={4} sx={{ margin: '0px 0px 0px 0px' }}>
           <Box sx={{ display: 'flex', justifyContent: 'center' }}>
             <Typography sx={{ display: 'flex' }}>
               <FmdGoodIcon size="small" />
-              <Typography sx={{ fontSize: '15px', margin: '3px 0px 0px 0px', '&:hover': { color: 'blue' } }}>
+              <Typography sx={{ fontSize: '19px', margin: '0px 0px 0px 0px', '&:hover': { color: 'blue' } }}>
                 Where is Best Place?
               </Typography>
             </Typography>
