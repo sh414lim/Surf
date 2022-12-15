@@ -1,72 +1,50 @@
-import React from "react";
-import { Box, Tab, Tabs, Typography, Grid } from "@mui/material";
+import React from 'react';
+import { Box, Tab, Tabs, Typography, Grid } from '@mui/material';
+import FmdGoodIcon from '@mui/icons-material/FmdGood';
+import { makeStyles } from '@mui/styles';
+import MainImageList from './main/MainImageList';
+import AdvertisementDetail from './main/AdvertisementDetail';
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
+const useStyles = makeStyles({
+  headNav: {
+    padding: '1px 3px 0px 3px',
+  },
+});
 
 function IntroPage() {
-  const [value, setValue] = React.useState(0);
+  const customStyle = useStyles();
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
   return (
     <>
-      <Grid container spaciong={2}>
-        <Grid xs={6}>
-          <h1>12</h1>
+      <Grid container spaciong={3} sx={{ padding: '5px' }}>
+        <Grid xs={4} sx={{ display: 'flex' }}>
+          <Typography>S U R F</Typography>
         </Grid>
-        <Grid xs={6}>
-          <h1>23</h1>
+        <Grid xs={4}>
+          <Typography sx={{ display: 'flex' }}>
+            <FmdGoodIcon size="small" />
+            <Typography sx={{ fontSize: '15px', margin: '3px 0px 0px 0px', '&:hover': { color: 'blue' } }}>
+              Where is Best Place?
+            </Typography>
+          </Typography>
+        </Grid>
+
+        <Grid xs={4}>
+          <Box sx={{ display: 'flex', justifyContent: 'end' }}>
+            <Typography className={customStyle.headNav}>SHOP</Typography>
+            <Typography className={customStyle.headNav}>BITCH</Typography>
+            <Typography className={customStyle.headNav}>LOGIN</Typography>
+            <Typography className={customStyle.headNav}>SIGN UP</Typography>
+          </Box>
         </Grid>
       </Grid>
+      <Grid container spaciong={1}>
+        <MainImageList />
+      </Grid>
+      <Grid container spaciong={1}>
+        <AdvertisementDetail />
+      </Grid>
     </>
-    // <div>
-    //   <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-    //     <Tabs
-    //       value={value}
-    //       onChange={handleChange}
-    //       aria-label="basic tabs example"
-    //     >
-    //       <Tab label="Item One" {...a11yProps(0)} />
-    //       <Tab label="Item Two" {...a11yProps(1)} />
-    //       <Tab label="Item Three" {...a11yProps(2)} />
-    //     </Tabs>
-    //   </Box>
-    //   <TabPanel value={value} index={0}>
-    //     Item One
-    //   </TabPanel>
-    //   <TabPanel value={value} index={1}>
-    //     Item Two
-    //   </TabPanel>
-    //   <TabPanel value={value} index={2}>
-    //     Item Three
-    //   </TabPanel>
-    // </div>
   );
 }
 
