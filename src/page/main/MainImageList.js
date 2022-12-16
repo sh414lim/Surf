@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { Link } from 'react-router-dom';
+import { Typography } from '@mui/material';
 const MainImageList = () => {
   return (
     <Box sx={{ width: '98%', height: 'auto', overflowY: 'scroll', margin: '0px 0px 0px 20px' }}>
