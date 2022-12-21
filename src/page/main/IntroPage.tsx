@@ -8,10 +8,10 @@ import Header from '../../common/Header';
 function IntroPage() {
   return (
     <>
-      <Grid container spaciong={1}>
+      <Grid>
         <MainImageList />
       </Grid>
-      <Grid container spaciong={1}>
+      <Grid>
         <AdvertisementDetail />
       </Grid>
     </>
