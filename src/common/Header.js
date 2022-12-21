@@ -23,9 +23,11 @@ const Header = () => {
         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
           <Typography sx={{ display: 'flex' }}>
             <FmdGoodIcon size="small" />
-            <Typography sx={{ fontSize: '19px', margin: '0px 0px 0px 0px', '&:hover': { color: 'blue' } }}>
-              Where is Best Place?
-            </Typography>
+            <Link to="/list">
+              <Typography sx={{ fontSize: '19px', margin: '0px 0px 0px 0px', '&:hover': { color: 'blue' } }}>
+                Where is Best Place?
+              </Typography>
+            </Link>
           </Typography>
         </Box>
       </Grid>
