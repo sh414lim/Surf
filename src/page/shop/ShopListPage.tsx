@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useState, useEffect, useMemo } from 'react';
 import { fetchList, getUser } from '../../service/api';
+import { Grid, Box, Typography, Paper } from '@mui/material';
+import SubHeader from '../../common/SubHeader';
 
 interface ListInterface {
   id: number;
@@ -28,16 +30,31 @@ function ShopListPage() {
   console.log(list);
   return (
     <>
-      {list &&
-        list.map(({ id, original_title, overview, poster_path, vote_count }: ListInterface, index: number) => (
-          <>
-            <img src={`https://image.tmdb.org/t/p/w200/${poster_path}`} />
-            <p>{original_title}</p>
-            <p>{id}</p>
-            <p>{overview}</p>
-            <p>{vote_count}</p>
-          </>
-        ))}
+      <SubHeader />
+      <Grid container spacing={2} sx={{ width: '80%', margin: '30px 0px 0px 230px' }}>
+        {list &&
+          list.map(({ id, original_title, overview, poster_path, vote_count }: ListInterface, index: number) => (
+            <>
+              <Grid
+                xs={6}
+                sx={{
+                  padding: '10px',
+                  width: '80%',
+                }}
+              >
+                {/* <Paper> */}
+                <Typography sx={{ fontSize: '20px' }}>{original_title}</Typography>
+                <Box sx={{ width: '90%' }}>
+                  <Typography>{vote_count}</Typography>
+                  <Box sx={{ justifyContent: 'end', display: 'flex' }}>
+                    <img src={`https://image.tmdb.org/t/p/w200/${poster_path}`} />
+                  </Box>
+                </Box>
+                {/* </Paper> */}
+              </Grid>
+            </>
+          ))}
+      </Grid>
     </>
   );
 }

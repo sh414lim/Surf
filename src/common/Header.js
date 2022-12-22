@@ -15,7 +15,11 @@ const Header = () => {
   const customStyle = useStyles();
 
   return (
-    <Grid container spaciong={3} sx={{ padding: '15px', width: '97%', margin: '0px 0px 0px 10px' }}>
+    <Grid
+      container
+      spaciong={3}
+      sx={{ padding: '15px', width: '97%', margin: '0px 0px 0px 10px', borderBottom: '1px solid rgba(0,0,0,0.2)' }}
+    >
       <Grid xs={4} sx={{ display: 'flex' }}>
         <Typography sx={{ fontSize: '20px' }}>S U R F</Typography>
       </Grid>
