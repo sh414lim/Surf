@@ -2,7 +2,7 @@
 
 
 ### 
-GET https://api.themoviedb.org/3/movie/550?api_key=13dce73d621a57563589d58029a15906 HTTP/1.1
+GET https://api.themoviedb.org/3/movie/popular?api_key=13dce73d621a57563589d58029a15906 HTTP/1.1
 
 
 ###
