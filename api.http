@@ -17,7 +17,8 @@ GET http://localhost:3000/api/v1/master/exhibitions/433/forms/3774 HTTP/1.1
 GET  http://localhost:3000/api/v1/master/exhibitions/433/forms?exFormId=onlinekbeauty_UCI_01 HTTP/1.1
 
 
-a
+###
+GET GET https://api.stormglass.io/v2/weather/point?api_key=6c3d6262-8667-11ed-bce5-0242ac130002-6c3d62da-8667-11ed-bce5-0242ac130002 HTTP/1.1
 
 
 

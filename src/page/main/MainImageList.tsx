@@ -104,4 +104,36 @@ const itemData = [
     img: 'https://images.unsplash.com/photo-1608880619984-49d0ad6e70a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fHN1cmZ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
     title: '123',
   },
+  {
+    img: 'https://images.unsplash.com/photo-1505459668311-8dfac7952bf0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    title: 'Bed',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1571690584414-fa2a1127a2e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80',
+    title: 'Bed',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1586996292898-71f4036c4e07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    title: 'Bed',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1502933691298-84fc14542831?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    title: 'Books',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1520443240718-fce21901db79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDd8fHN1cmZ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+    title: 'Sink',
+  },
+  {
+    img: ' https://images.unsplash.com/photo-1506797220058-533e019ac7fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHN1cmZ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+    title: 'text',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1608880619984-49d0ad6e70a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fHN1cmZ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+    title: '123',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1505459668311-8dfac7952bf0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    title: 'Bed',
+  },
 ];
