@@ -8,7 +8,7 @@ async function main() {
   const app = express();
   const apolloServer = new ApolloServer({
     typeDefs: gql`
-      type query {
+      type Query {
         hello: String
       }
     `,
