@@ -7,7 +7,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "module": "es2020",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -28,5 +28,8 @@
       "@/constants/*": ["./src/constants/*"]
     }
   },
-  "include": ["src", "graphql"]
+  "include": ["src", "graphql"],
+  "ts-node": {
+    "esm": true
+  }
 }
