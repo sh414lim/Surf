@@ -1,13 +1,12 @@
 import 'reflect-metadata';
 import express from 'express';
-import { ApolloServer, gql } from 'apollo-server-express';
+import { ApolloServer } from 'apollo-server-express';
 import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
 import http from 'http';
-import { buildSchema } from 'graphql';
+import { buildSchema } from 'type-graphql';
 import { FilmResolver } from './resolvers/Film';
 
 async function main() {
-  const app = express();
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
       resolvers: [FilmResolver],
@@ -15,6 +14,8 @@ async function main() {
 
     plugins: [ApolloServerPluginLandingPageLocalDefault()],
   });
+
+  const app = express();
   await apolloServer.start();
   apolloServer.applyMiddleware({ app });
 

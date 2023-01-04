@@ -1,36 +1,26 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "es2020",
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
+    "skipLibCheck": false,
+    "sourceMap": true,
+    "outDir": "./dist",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "lib": ["es6", "dom"],
+    "removeComments": true,
     "noImplicitAny": true,
-    "noImplicitThis": true,
     "strictNullChecks": true,
-    "noEmit": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "strictPropertyInitialization": false,
-    "jsx": "react-jsx",
-
-    "paths": {
-      "@/components/*": ["./src/components/*"],
-      "@/modules/*": ["./src/modules/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "@/services/*": ["./src/services/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/constants/*": ["./src/constants/*"]
-    }
+    "resolveJsonModule": true,
+    "baseUrl": "."
   },
-  "include": ["src", "graphql"],
-  "ts-node": {
-    "esm": true
-  }
+  "exclude": ["node_modules"],
+  "include": ["./**/*.ts"]
 }
