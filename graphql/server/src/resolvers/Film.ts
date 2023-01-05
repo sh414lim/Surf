@@ -4,9 +4,9 @@ import { Film } from '../entities/Film';
 
 @Resolver(Film)
 class FilmResolver {
-  @Query(() => String)
-  async hello() {
-    return 'hello world';
+  @Query(() => [Film])
+  films(): Film[] {
+    return ghibliData.films;
   }
 }
 
