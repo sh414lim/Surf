@@ -1,7 +1,7 @@
+import { Director } from '../entities/Director';
 import { FieldResolver, Query, Resolver, Root } from 'type-graphql';
 import ghibliData from '../data/ghibli';
 import { Film } from '../entities/Film';
-import { Director } from '../entities/Director';
 
 @Resolver(Film)
 class FilmResolver {
@@ -12,6 +12,7 @@ class FilmResolver {
 
   @FieldResolver(() => Director)
   director(@Root() parentFilm: Film): Director | undefined {
+    console.log(Film);
     return ghibliData.directors.find(dr => dr.id === parentFilm.director_id);
   }
 }
