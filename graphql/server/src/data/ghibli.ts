@@ -18,6 +18,17 @@ export interface GhibliData {
   cuts: Cut[];
 }
 
+export interface Director {
+  id: number;
+  name: string;
+}
+
+export interface GhiibiData {
+  films: Film[];
+  directors: Director[];
+  cuts: Cut[];
+}
+
 const ghibliData: GhibliData = {
   films: [
     {
