@@ -3,6 +3,7 @@ import { ChakraProvider, Box, Text, Link, VStack, Code, Grid, theme } from '@cha
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import FilmList from './film/FilmList';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Main from './film/Main';
 
 //GraphQl 요청과 캐시관리
 const apolloClient = new ApolloClient({
@@ -14,7 +15,7 @@ export const App = () => (
   <ApolloProvider client={apolloClient}>
     <ChakraProvider theme={theme}>
       <BrowserRouter>
-        <Route exact path="/" component={FilmList} />
+        <Route exact path="/" component={Main} />
       </BrowserRouter>
     </ChakraProvider>
   </ApolloProvider>

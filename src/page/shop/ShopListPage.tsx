@@ -14,7 +14,7 @@ interface ListInterface {
   vote_count: number;
 }
 
-function ShopListPage() {
+function ShopListPage<T>() {
   const [list, setList] = useState([]);
 
   useEffect(() => {
